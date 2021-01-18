@@ -1,0 +1,90 @@
+$font-color: #342E37;
+$blue: #3C91E6;
+$orange: #FA824C;
+$green: #75C4A3;
+$bg-color: #D4F1F7;
+$md-grey: #bbb;
+$small-gap: 24px;
+$large-gap: 32px;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: $font-color;
+    background: $bg-color;
+}
+
+.round {
+    padding: $small-gap;
+}
+
+.game-container {
+    padding: $small-gap 0 0;
+    .bracket-group {
+        display: flex;
+    }
+    .pet {
+        background: #fff;
+        margin-bottom: 5px;
+        width: 160px;
+        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        &.green {
+            box-shadow: 0 0 8px 0 rgba(20, 105, 25, 0.5), 0 6px 20px 0 rgba(20, 105, 25, 0.8);
+            border: 1px solid #008000;
+            margin: -1px;
+            margin-bottom: 5px;
+        }
+        .seed {
+            font-size: 0.8rem;
+            padding: 6px 10px 6px 4px;
+        }
+        .photo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                max-width: 150px;
+                max-height: 150px;
+                padding: 5px;
+            }
+        }
+        .text {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            padding: 0 5px 5px;
+        }
+    }
+    .bracket-lines {
+        display: flex;
+        flex-direction: column;
+        div {
+            border: 3px solid $md-grey;
+            width: 100px;
+            border-left: 0;
+            flex: 1;
+        }
+        .top {
+            margin-top: 80px;
+            border-bottom: 0;
+        }
+        .middle {
+            border: 0;
+            border-right: 3px solid $md-grey;
+        }
+        .bottom {
+            margin-bottom: 80px;
+            border-top: 0;
+        }
+        .upper {
+            border: 0;
+        }
+        .lower {
+            border-right: 0;
+            border-bottom: 0;
+            margin-top: -5px;
+        }
+    }
+}
