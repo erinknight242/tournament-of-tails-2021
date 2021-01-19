@@ -28,19 +28,19 @@ export default class App extends Component {
     const data = [];
     const games = [];
     let currentRound = "";
-    this.state.db.collection("pets").get().then((querySnapshot) => {
+    this.state.db.collection("pets2021").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         data[doc.id] = (doc.data());
       });
       this.setState({ data });
     });
-    this.state.db.collection("games").get().then((querySnapshot) => {
+    this.state.db.collection("games2021").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         games[doc.id] = (doc.data());
       });
       this.setState({ games });
     });
-    this.state.db.collection("currentRound").get().then((querySnapshot) => {
+    this.state.db.collection("currentRound2021").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         currentRound = doc.data().round;
       });
